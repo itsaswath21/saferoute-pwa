@@ -1,13 +1,22 @@
-SafeRoute — Fire Exit PWA
-
-This version removes campus navigation and focuses on a building-level fire-exit/evacuation prototype.
+SAFEROUTE PWA — ANDROID SETUP
 
 Files:
-- index.html: responsive app and fictional sample graph
-- manifest.json: PWA installation metadata
-- service-worker.js: basic offline cache
+- index.html: SafeRoute app
+- manifest.json: installable app metadata
+- service-worker.js: offline caching
 - icons/: app icons
 
-Publish by uploading the CONTENTS of this folder to the root of the existing GitHub Pages repository. Keep index.html, manifest.json, service-worker.js and icons/ at repository root. Commit to main and wait for GitHub Pages to deploy.
+IMPORTANT: Android PWA installation and service workers require HTTPS (or localhost). Opening index.html directly from Downloads will let you test the app, but will NOT enable full PWA installation/offline behavior.
 
-Important safety limitation: the graph is fictional and not a verified VIT floor plan. Hazard switches are simulations only. Do not use this prototype for a real emergency. For accurate routing, obtain current floor plans and have corridors, stairs, exits, accessible routes, and assembly points validated by authorized VIT facilities/safety personnel.
+EASY FREE HOSTING WITH GITHUB PAGES
+1. Sign in to GitHub and create a new public repository named saferoute-pwa.
+2. Upload all files and folders from this package (index.html, manifest.json, service-worker.js, icons/).
+3. Open repository Settings > Pages.
+4. Under Build and deployment, choose Deploy from a branch, select main and /(root), then Save.
+5. Wait for GitHub Pages to publish the site. Open the HTTPS URL it gives you on your Android phone in Chrome.
+6. In Chrome, tap the three-dot menu > Install app (or Add to Home screen). If shown inside SafeRoute, you can also tap Install SafeRoute.
+7. Launch SafeRoute from the home screen. After the first successful load, core app files can be cached for offline use.
+
+You can also deploy the folder to any static web host that provides HTTPS.
+
+SAFETY: This is a fictional-map educational demo with simulated hazards. Do not use it to direct a real evacuation.
