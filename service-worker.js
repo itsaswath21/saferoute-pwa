@@ -1,4 +1,4 @@
-const CACHE_NAME = 'saferoute-pwa-v1';
+const CACHE_NAME = 'saferoute-pwa-v2-vit-campus';
 const APP_FILES = ['./', './index.html', './manifest.json', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)));

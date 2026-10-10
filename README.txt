@@ -1,22 +1,20 @@
-SAFEROUTE PWA — ANDROID SETUP
+SAFEROUTE — VIT VELLORE CAMPUS PILOT
 
-Files:
-- index.html: SafeRoute app
-- manifest.json: installable app metadata
-- service-worker.js: offline caching
-- icons/: app icons
+Deploy:
+1. Upload every file and the icons folder to the ROOT of the existing GitHub repository.
+2. Commit changes to main. GitHub Pages should redeploy automatically.
+3. On iPhone, open https://itsaswath21.github.io/saferoute-pwa/ in Safari. If it appears unchanged, close the app and reload the page; if needed remove and re-add the Home Screen app after the update deploys.
 
-IMPORTANT: Android PWA installation and service workers require HTTPS (or localhost). Opening index.html directly from Downloads will let you test the app, but will NOT enable full PWA installation/offline behavior.
+Features:
+- Interactive OpenStreetMap centered on the VIT Vellore area.
+- Place search via Nominatim and road-route estimates via OSRM public demo services (internet required; public services have usage limits and are not guaranteed).
+- Device location button (requires user permission).
+- Floor plan image preview and local-device details storage.
+- Indoor routing is intentionally NOT enabled: verified floor plans, corridors, stairs, accessible routes, exits, and approval from campus facilities/security are required first.
 
-EASY FREE HOSTING WITH GITHUB PAGES
-1. Sign in to GitHub and create a new public repository named saferoute-pwa.
-2. Upload all files and folders from this package (index.html, manifest.json, service-worker.js, icons/).
-3. Open repository Settings > Pages.
-4. Under Build and deployment, choose Deploy from a branch, select main and /(root), then Save.
-5. Wait for GitHub Pages to publish the site. Open the HTTPS URL it gives you on your Android phone in Chrome.
-6. In Chrome, tap the three-dot menu > Install app (or Add to Home screen). If shown inside SafeRoute, you can also tap Install SafeRoute.
-7. Launch SafeRoute from the home screen. After the first successful load, core app files can be cached for offline use.
-
-You can also deploy the folder to any static web host that provides HTTPS.
-
-SAFETY: This is a fictional-map educational demo with simulated hazards. Do not use it to direct a real evacuation.
+IMPORTANT SAFETY / DATA NOTES:
+- This is a student prototype, not an official VIT app and not a certified emergency system.
+- Map pins and outdoor paths are based on public map services and may be incomplete, inaccurate, closed, or not pedestrian-accessible. Verify before relying on them.
+- Hazard switches are simulations only; there is no live sensor feed or campus alert integration.
+- In a real emergency, follow official campus alarms, security staff, and posted evacuation signs.
+- Uploaded floor-plan images remain on the current device in this prototype; they are not sent to a server.
